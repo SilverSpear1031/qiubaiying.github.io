@@ -4,7 +4,7 @@ title:      What is Machine Learning?
 subtitle:   
 date:       2017-11-27
 author:     SilverSpear1031
-header-img: img/post-bg-mma-4.jpg
+header-img: img/post-bg-mma-1.jpg
 catalog: true
 tags:
     - ML/DL
