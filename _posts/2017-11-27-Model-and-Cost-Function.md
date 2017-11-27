@@ -13,7 +13,7 @@ tags:
 
 #1.2 Model and Cost Function
 
-#1. Model Representation
+##1. Model Representation
 
 @(DM/ML)
 
@@ -25,10 +25,10 @@ To describe the supervised learning problem slightly more formally, our goal is,
 
 When the target variable that we’re trying to predict is continuous, such as in our housing example, we call the learning problem a regression problem. When y can take on only a small number of discrete values (such as if, given the living area, we wanted to predict if a dwelling is a house or an apartment, say), we call it a classification problem.
 
-#2. `Cost Function`
+##2. `Cost Function`
 ![Alt text](http://i1.bvimg.com/620631/6cabda49554dde7e.png)
 
-#3.1 Cost Function - Intuition I
+##3.1 Cost Function - Intuition I
 
 If we try to think of it in visual terms, our training data set is scattered on the x-y plane. We are trying to make a straight line (defined by hθ(x)) which passes through these scattered data points.
 
@@ -43,7 +43,7 @@ This increases our cost function to 0.58. Plotting several other points yields t
 
 `Thus as a goal, we should try to minimize the cost function.` In this case, θ1=1 is our global minimum.
 
-#3.2 Cost Function - Intuition II
+##3.2 Cost Function - Intuition II
 
 A `contour plot` is a graph that contains many contour lines. A contour line of a two variable function has a constant value at all points of the same line. An example of such a graph is the one to the right below.
 ![Alt text](http://i1.bvimg.com/620631/6b363b15eada4ea5.png)
