@@ -98,10 +98,10 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "柏荧(BY)",
+        href: "http://qiubaiying.top/"
     },{
-        title: "Github",
-        href: "https://github.com"
+        title: "明亮",
+        href: "https://software22.github.io/myblog/index.html"
     }
 ]
