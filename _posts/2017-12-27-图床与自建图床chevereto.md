@@ -73,22 +73,22 @@ git clone https://github.com/Chevereto/Chevereto-Free.git
 
 如果一切正常，可见下图，不过一般是英文
 数据库即之前配置LAMP时的选择，如果使用的MariaDB也是一样的（MySQL和它是完全兼容的）
-![Alt text](./20160819175029.png)
+![20160819175029.png](http://45.77.14.203/Chevereto-Free/images/2017/12/27/20160819175029.png)
 
 注意网站模式，如果是个人模式，网站是只能指定一个账户使用的，社区模式类似论坛。
 但这些包括是否开启注册，在网站后台即dashboard（仪表盘）都是可以设置的。
-![Alt text](./20160819175319.png)
+![20160819175319.png](http://45.77.14.203/Chevereto-Free/images/2017/12/27/20160819175319.png)
 
 ## 4. 上传图片
 chevereto不仅可以创建相册管理图片，也可以设置是否公开
 `最重要的是，他的Embed codes功能，可以非常方便的获取各种格式的URL`
-![Alt text](./20160819175467.JPG)
+![20160819175467.jpg](http://45.77.14.203/Chevereto-Free/images/2017/12/27/20160819175467.jpg)
 
 ## 5. 图片压缩
 如果你博客上所有的图片未经压缩，动辄几MB的页面肯定是不流畅的，放在图床上也很臃肿
 这里推荐一个压缩图片的网站：[https://tinypng.com/](https://tinypng.com/)
 主要还是免费方便，而且压缩效果不凡
-![Alt text](./201608191754676789.JPG)
+![201608191754676789.jpg](http://45.77.14.203/Chevereto-Free/images/2017/12/27/201608191754676789.jpg)
 
 ## 6.总结
 其实一开始我使用了docker hub上的chevereto和Mysql的安装脚本，但是docker --link始终不起作用，很是苦恼（说白了还是docker一知半解），可能是mysql镜像没有在监听服务器3306端口的原因，但不明白为什么没有监听
