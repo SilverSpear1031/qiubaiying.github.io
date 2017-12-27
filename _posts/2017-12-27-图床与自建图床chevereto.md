@@ -4,7 +4,7 @@ title:      图床与自建图床chevereto
 subtitle:   
 date:       2017-12-27
 author:     SilverSpear1031
-header-img: img/Dec.jpg
+header-img: img/post-bg-acg-3.jpg
 catalog: true
 tags:
     - 图床-Image hosting service
