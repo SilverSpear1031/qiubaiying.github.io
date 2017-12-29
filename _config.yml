@@ -9,6 +9,10 @@ url: "http://SilverSpear1031.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/SilverSpear1031/SilverSpear1031.github.io" # you code repository
 
+#seo plugins
+plugins:
+  - jekyll-seo-tag
+
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "He's too lazy to left anything"
