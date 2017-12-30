@@ -12,7 +12,8 @@ github_repo: "https://github.com/SilverSpear1031/SilverSpear1031.github.io" # yo
 #seo plugins
 plugins:
   - jekyll-seo-tag
-
+  - jekyll-sitemap  
+  
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "He's too lazy to left anything"
