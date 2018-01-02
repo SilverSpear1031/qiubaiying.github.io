@@ -7,8 +7,7 @@ author:     SilverSpear1031
 header-img: img/post-bg-acg-3.jpg
 catalog: true
 tags:
-    - 图床-Image hosting service
-    - chevereto
+    - 图床与自建图床chevereto
 ---
 
 # 图床-Image hosting service
