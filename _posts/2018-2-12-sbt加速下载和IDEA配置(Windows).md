@@ -1,0 +1,76 @@
+---
+layout:     post
+title:      sbt加速下载和IDEA配置(Windows)
+subtitle:   慢工细活sbt
+date:       2018-2-12
+author:     SilverSpear1031
+header-img: img/post-bg-acg-4.jpg
+catalog: true
+tags:
+    - Scala
+---
+# sbt加速下载和IDEA配置(Windows)
+
+@(Scala)
+
+## 1. 配置sbtconfig.txt
+我的sbt安装在H盘根目录下，所以`参照时务必记得修改对应路径`
+
+首先配置H:\sbt\conf下的sbtconfig.txt：
+```
+# Set the java args to high
+
+-Xmx512M
+
+-XX:MaxPermSize=256m
+
+-XX:ReservedCodeCacheSize=128m
+
+
+
+# Set the extra SBT options
+
+-Dsbt.log.format=true
+-Dsbt.boot.directory=H:\sbt-repository\boot
+-Dsbt.global.base=H:\sbt-repository
+-Dsbt.ivy.home=H:\sbt-repository
+-Dsbt.repository.config=H:\sbt\conf\repo.properties
+-Dsbt.repository.secure=false
+
+```
+sbt.ivy.home指定了本地自定义的repository路径（如果不设置就是默认的用户目录C:\Users\Administrator\.ivy2），其次最好手动创建对应路径的H:\sbt-repository和H:\sbt-repository\boot文件夹。
+之后sbt的依赖包下载都会存储在repository路径下，可能会比较大，所以记得留出足够空间。
+
+## 2. 配置repo.properties
+首先在H:\sbt\conf下创建repo.properties文件，之后编辑内容即指定镜像站的地址如下：
+```
+[repositories]
+#local
+public: http://maven.aliyun.com/nexus/content/groups/public/
+typesafe:http://dl.bintray.com/typesafe/ivy-releases/ , [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext], bootOnly
+ivy-sbt-plugin:http://dl.bintray.com/sbt/sbt-plugin-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]
+sonatype-oss-releases
+
+sonatype-oss-snapshots
+```
+如果是第一次使用sbt，在进行上述操作后，通过cmd输入命令sbt（记得添加环境变量bin目录），会进行`当前安装的sbt版本`的所需包下载。
+如果是在已有项目路径中使用sbt，会进行`项目设置的sbt版本`的所需包的下载。可以事先在类似H:\example\project\build.properties的文件中查找。
+
+## 3. 配置IDEA
+如下图，需要设置VM parameters和sbt-launch.jar
+![Alt text](./QQ截图20180212021715.png)
+其中VM parameters具体如下，其实和sbtconfig.txt的内容几乎无异：
+```
+-XX:MaxPermSize=512M
+-Dsbt.log.format=true
+-Dsbt.boot.directory=H:\sbt-repository\boot
+-Dsbt.global.base=H:\sbt-repository
+-Dsbt.ivy.home=H:\sbt-repository
+-Dsbt.repository.config=H:\sbt\conf\repo.properties
+-Dsbt.repository.secure=false
+```
+
+## 4. 尾语
+可能有时候在下载很多包以后会有卡住不动的现象，记得重启sbt就好，他会接着上次没下完的继续下载的。
+
+听说[Pants](https://www.pantsbuild.org/)是个不错的替代品？
