@@ -58,7 +58,7 @@ sonatype-oss-snapshots
 
 ## 3. 配置IDEA
 如下图，需要设置VM parameters和sbt-launch.jar
-![Alt text](./QQ截图20180212021715.png)
+![QQ20180212021715.png](http://45.77.14.203/Chevereto-Free/images/2018/02/11/QQ20180212021715.png)
 其中VM parameters具体如下，其实和sbtconfig.txt的内容几乎无异：
 ```
 -XX:MaxPermSize=512M
