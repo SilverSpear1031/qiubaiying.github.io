@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      sbt加速下载和IDEA配置(Windows)
+title:      sbt加速下载和IDEA配置
 subtitle:   慢工细活sbt
 date:       2018-2-12
 author:     SilverSpear1031
@@ -9,7 +9,7 @@ catalog: true
 tags:
     - Scala
 ---
-# sbt加速下载和IDEA配置(Windows)
+# sbt加速下载和IDEA配置
 
 @(Scala)
 
